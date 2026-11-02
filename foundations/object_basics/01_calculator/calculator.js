@@ -1,34 +1,29 @@
-const add = function (x, y) {
-	return x + y;
-};
-add(2, 5);
+// function declarations
+function add(a, b) {
+	return a + b;
+}
 
-const subtract = function (x, y) {
-	return x - y;
-};
-subtract(10, 5);
-
-const sum = function (x) {
-	return x.reduce((acc, cur) => acc + cur, 0);
+// function expression
+const subtract = function (a, b) {
+	return a - b;
 };
 
-const multiply = function (x) {
-	return x.reduce((acc, cur) => acc * cur, 1);
-};
+//arrow function
+const sum = (a) => a.reduce((acc, cur) => acc + cur, 0);
+//shorthand
+const multiply = (a) => a.reduce((acc, sum) => acc * sum, 1);
 
-const power = function (x, y) {
-	return x ** y;
-};
+//arrow function shorthand
+const power = (a, b) => a ** b;
 
-const factorial = function (x) {
-	for (let i = x - 1; i > 1; i--) {
-		x = x * i;
+const factorial = (a) => {
+	const array = [];
+	for (let i = 1; i <= a; i++) {
+		array.push(i);
 	}
-	if (x === 0) {
-		return 1;
-	}
-	return x;
+	return array.reduce((acc, cur) => acc * cur, 1);
 };
+
 // Do not edit below this line
 module.exports = {
 	add,
